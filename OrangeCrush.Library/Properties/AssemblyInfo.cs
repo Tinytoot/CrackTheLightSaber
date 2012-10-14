@@ -1,16 +1,17 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CrackTheLightSaber")]
+[assembly: AssemblyTitle("OrangeCrush.Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Telerik Corp.")]
-[assembly: AssemblyProduct("CrackTheLightSaber")]
-[assembly: AssemblyCopyright("Copyright @ Telerik 2002-2012")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("OrangeCrush.Library")]
+[assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d26e2a8e-1e7d-4c09-9b78-65e35593e8e5")]
+[assembly: Guid("0a278e67-d10a-453b-a6a8-a3d830127023")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,5 +32,6 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("2012.2.724.0")]
-[assembly: AssemblyFileVersion("2012.2.724.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]
