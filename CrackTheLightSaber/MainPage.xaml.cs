@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using System.Windows.Media;
 using System.Windows.Controls;
-
+using Microsoft.Phone.Tasks;
 
 namespace CrackTheLightSaber
 {
@@ -28,11 +28,21 @@ namespace CrackTheLightSaber
             saberState = SaberState.Off;
         }
 
+        public void RateBarMenuItem_Click(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask reviewTask = new MarketplaceReviewTask();
+            reviewTask.Show();
+        }
+
+        public void AboutMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri( string.Format("/About.xaml"), UriKind.Relative));
+        }
+
         void CompositionTarget_Rendering(object sender, EventArgs e)
         {
             CheckState();
         }
-
 
         private void OnAccelerometerHelperReadingChanged(object sender, AccelerometerHelperReadingEventArgs e)
         {
@@ -144,24 +154,29 @@ namespace CrackTheLightSaber
 
         void ShowHideSaber()
         {
-            int moveValue = 30;
+            int moveValue = 40;
             if (saberState == SaberState.Starting)
-                moveValue = -30;
+                moveValue = -40;
 
             int lightSaberCoverTop = (int)Canvas.GetTop(lightSaberCover) + moveValue;
             Canvas.SetTop(lightSaberCover, lightSaberCoverTop);
 
 
 
-            if (lightSaberCoverTop > 10)
+            if (lightSaberCoverTop > 16)
             {
                 saberState = SaberState.Off;
-                Canvas.SetTop(lightSaberCover, 10);
+                Canvas.SetTop(lightSaberCover, 16);
             }
             if (lightSaberCoverTop < -460)
                 saberState = SaberState.On;
         }
         #endregion
+
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

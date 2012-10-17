@@ -1,8 +1,10 @@
-﻿using System.Windows;
+﻿using System.Reflection;
+using System.Windows;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.Reminders;
 
 namespace CrackTheLightSaber
 {
@@ -61,8 +63,13 @@ namespace CrackTheLightSaber
 			//Creates an instance of the Diagnostics component.
             diagnostics = new RadDiagnostics();
 
+            var assembly = Assembly.GetExecutingAssembly().FullName;
+            string version = assembly.Split('=')[1].Split(',')[0];
+
             //Defines the default email where the diagnostics info will be send.
-            diagnostics.EmailTo = "Me@MyCompany.com";
+            diagnostics.EmailTo = "orangecrushie@gmail.com";
+
+            diagnostics.EmailSubject = "Support Request from Crack The Light Saber " + version;
 
             //Initializes this instance.
             diagnostics.Init();
@@ -70,8 +77,16 @@ namespace CrackTheLightSaber
 		      //Creates a new instance of the RadRateApplicationReminder component.
             rateReminder = new RadRateApplicationReminder();
 
+            rateReminder.MessageBoxInfo = new MessageBoxInfoModel()
+            {
+                Buttons = MessageBoxButtons.YesNo,
+                Content = "Would you like to rate our app in the marketplace ?",
+                SkipFurtherRemindersMessage = "Skip further reminders",
+                Title = "Rate My App"
+            };
+
             //Sets how often the rate reminder is displayed.
-            rateReminder.RecurrencePerUsageCount = 2;
+            rateReminder.RecurrencePerUsageCount = 10;
     
         }
 

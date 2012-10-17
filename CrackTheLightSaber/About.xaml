@@ -38,8 +38,9 @@
                 <TextBlock 
                     Text="Crack The Light Saber" 
                     Margin="12,0,12,0" 
+                     HorizontalAlignment="Left"
                     FontSize="{StaticResource PhoneFontSizeLarge}" 
-                    FontFamily="{StaticResource PhoneFontFamilySemiBold}"/>
+                    FontFamily="{StaticResource PhoneFontFamilySemiBold}" Height="44" Width="327" />
                 <TextBlock 
                     Text="1.0" 
                     Margin="12,0,12,0" 
@@ -62,9 +63,9 @@
                 FontSize="{StaticResource PhoneFontSizeNormal}" 
                 Command="{Binding SendAnEmailCommand}"/>
             <HyperlinkButton 
-                Grid.Row="3"
+                Grid.Row="4"
                 Content="rate this app" 
-                Margin="0,12,0,0" 
+                Margin="0,39,0,357" 
                 HorizontalAlignment="Left" 
                 Foreground="{StaticResource PhoneAccentBrush}" 
                 FontSize="{StaticResource PhoneFontSizeNormal}" 
@@ -75,7 +76,7 @@
                     Stretch="None" 
                     HorizontalAlignment="Left" />
                 <TextBlock 
-                    Text="Copyright 2012" 
+                    Text="Copyright© 2012" 
                     Margin="0,12,0,0" 
                     FontSize="{StaticResource PhoneFontSizeNormal}"/>
                 <TextBlock 
