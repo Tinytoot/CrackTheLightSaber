@@ -14,15 +14,22 @@
     shell:SystemTray.IsVisible="True">
 
     <Grid>
-        <Canvas>
+        <StackPanel Grid.Row="0" Margin="0" Name="stackPanel1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+            <Canvas>
             <!--LayoutRoot is the root grid where all page content is placed-->
             <!--TitlePanel contains the name of the application and page title-->
             <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28" Canvas.ZIndex="2">
                 <TextBlock x:Name="ApplicationTitle" Text="Crack the Light Saber" Style="{StaticResource PhoneTextNormalStyle}"/>
             </StackPanel>
-            <Image Source="Images/LightSaber.jpg" Visibility="Visible" Tap="LightSaber_Tap" Stretch="Fill" Height="673" Width="442" Canvas.Top="17" Canvas.Left="24" />
-            <Rectangle x:Name="lightSaberCover" Fill="Black" Height="432" Width="442" Visibility="Visible" Canvas.Top="16" Canvas.ZIndex="1" Canvas.Left="32" />
+            <Image Source="Images/LightSaber.jpg" Visibility="Visible" Tap="LightSaber_Tap" Stretch="Fill" Height="593" Width="442" Canvas.Top="17" Canvas.Left="24" />
+            <Rectangle x:Name="lightSaberCover" Fill="Black" Height="380" Width="442" Visibility="Visible" Canvas.Top="16" Canvas.ZIndex="1" Canvas.Left="32" />
         </Canvas>
+        </StackPanel>
+       
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" >
+            <my:AdControl AdUnitId="102142" Name="adControl1" ApplicationId="4c9b6134-e390-4d06-a22c-c48b3b403c16" Width="480" Height="80" IsAutoCollapseEnabled="True" />
+        </StackPanel>
+
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Mode="Minimized">

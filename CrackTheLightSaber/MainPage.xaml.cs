@@ -173,10 +173,5 @@ namespace CrackTheLightSaber
         }
         #endregion
 
-        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-    }
+     }
 }
